@@ -31,7 +31,7 @@ public class TriggerCallbackThread {
     private LinkedBlockingQueue<HandleCallbackParam> callBackQueue = new LinkedBlockingQueue<HandleCallbackParam>();
     public static void pushCallBack(HandleCallbackParam callback){
         getInstance().callBackQueue.add(callback);
-        logger.debug(">>>>>>>>>>> xxl-job, push callback request, logId:{}", callback.getLogId());
+        logger.debug(">>>>>>>>>>> REDOOP, push callback request, logId:{}", callback.getLogId());
     }
 
     /**
@@ -43,7 +43,7 @@ public class TriggerCallbackThread {
 
         // valid
         if (XxlJobExecutor.getAdminBizList() == null) {
-            logger.warn(">>>>>>>>>>> xxl-job, executor callback config fail, adminAddresses is null.");
+            logger.warn(">>>>>>>>>>> REDOOP, executor callback config fail, adminAddresses is null.");
             return;
         }
 
@@ -83,7 +83,7 @@ public class TriggerCallbackThread {
                 } catch (Exception e) {
                     logger.error(e.getMessage(), e);
                 }
-                logger.info(">>>>>>>>>>> xxl-job, executor callback thread destory.");
+                logger.info(">>>>>>>>>>> REDOOP, executor callback thread destory.");
 
             }
         });
@@ -111,13 +111,13 @@ public class TriggerCallbackThread {
             try {
                 ReturnT<String> callbackResult = adminBiz.callback(callbackParamList);
                 if (callbackResult!=null && ReturnT.SUCCESS_CODE == callbackResult.getCode()) {
-                    callbackLog(callbackParamList, "<br>----------- xxl-job callback success");
+                    callbackLog(callbackParamList, "<br>----------- REDOOP callback success");
                     break;
                 } else {
-                    callbackLog(callbackParamList, "<br>----------- xxl-job callback fail, callbackResult:" + callbackResult);
+                    callbackLog(callbackParamList, "<br>----------- REDOOP callback fail, callbackResult:" + callbackResult);
                 }
             } catch (Exception e) {
-                callbackLog(callbackParamList, "<br>----------- xxl-job callback error, errorMsg:" + e.getMessage());
+                callbackLog(callbackParamList, "<br>----------- REDOOP callback error, errorMsg:" + e.getMessage());
                 //getInstance().callBackQueue.addAll(callbackParamList);
             }
         }

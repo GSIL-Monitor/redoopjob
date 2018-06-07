@@ -96,7 +96,9 @@
 				<li class="nav-click <#if pageName == "jobinfo">active</#if>" ><a href="${request.contextPath}/jobinfo"><i class="fa fa-circle-o text-aqua"></i><span>${I18n.jobinfo_name}</span></a></li>
 				<li class="nav-click <#if pageName == "joblog">active</#if>" ><a href="${request.contextPath}/joblog"><i class="fa fa-circle-o text-yellow"></i><span>${I18n.joblog_name}</span></a></li>
                 <li class="nav-click <#if pageName == "jobgroup">active</#if>" ><a href="${request.contextPath}/jobgroup"><i class="fa fa-circle-o text-green"></i><span>${I18n.jobgroup_name}</span></a></li>
+<#--
 				<li class="nav-click <#if pageName == "help">active</#if>" ><a href="${request.contextPath}/help"><i class="fa fa-circle-o text-gray"></i><span>${I18n.job_help}</span></a></li>
+-->
 			</ul>
 		</section>
 		<!-- /.sidebar -->
@@ -182,9 +184,9 @@
 
 <#macro commonFooter >
 	<footer class="main-footer">
-        Powered by <b>Redoop-JOB</b> ${I18n.admin_version}
+        Powered by <b>Redoop</b>
 		<div class="pull-right hidden-xs">
-            <strong>Copyright &copy; 2018-${.now?string('yyyy')} &nbsp;
+            <strong>Copyright &copy; 2013-${.now?string('yyyy')} &nbsp;
                 <a href="http://www.redoop.com/" target="_blank" >Redoop</a>
             </strong><!-- All rights reserved. -->
 		</div>
