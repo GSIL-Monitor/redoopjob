@@ -9,12 +9,21 @@
 	<style type="text/css">
 		.CodeMirror {
       		font-size:16px;
-            width: 100%;
+            width: 50%;
       		height: 100%;
             /*bottom: 0;
             top: 0px;*/
             position: absolute;
 		}
+        .eChartWindow{
+            font-size:16px;
+            width: 50%;
+            height: 100%;
+            /*bottom: 0;
+            top: 0px;*/
+            position: absolute;
+            left: 50%;
+        }
     </style>
 </head>
 <body class="skin-blue fixed layout-top-nav">
@@ -80,7 +89,11 @@
             </nav>
         </header>
 
-		<div class="content-wrapper" id="ideWindow" ></div>
+		<div class="content-wrapper" id="ideWindow" >
+            <#--<div id="eChartWindow" style="width: 400px;height:400px;"></div>-->
+            <div id="eChartWindow" class="eChartWindow"></div>
+        </div>
+		<#--<div class="content-wrapper" id="eChartWindow"></div>-->
 
 		<!-- footer -->
 		<#--<@netCommon.commonFooter />-->
@@ -133,6 +146,8 @@
     </#if>
 
 
+<script src="${request.contextPath}/static/js/echarts.js"></script>
+<script src="${request.contextPath}/static/js/echarts.min.js"></script>
 <script src="${request.contextPath}/static/plugins/codemirror/lib/codemirror.js"></script>
 <script src="${glueTypeModeSrc}"></script>
 <script src="${request.contextPath}/static/plugins/codemirror/addon/hint/show-hint.js"></script>
@@ -143,6 +158,8 @@ var id = '${jobInfo.id}';
 var ideMode = '${glueTypeIdeMode}';
 </script>
 <script src="${request.contextPath}/static/js/jobcode.index.1.js"></script>
+    <script type="text/javascript">
 
+    </script>
 </body>
 </html>
