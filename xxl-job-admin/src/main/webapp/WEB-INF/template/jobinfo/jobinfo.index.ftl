@@ -196,6 +196,7 @@ public class DemoGlueJobHandler extends IJobHandler {
 
 }
 </textarea>
+<!--封装shell脚本-->
 <textarea class="glueSource_shell" style="display:none;" >
 #!/bin/bash
 echo "xxl-job: hello shell"
@@ -214,6 +215,9 @@ done-->
 echo "Good bye!"
 exit 0
 </textarea>
+
+
+
 <textarea class="glueSource_python" style="display:none;" >
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-

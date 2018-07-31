@@ -1,7 +1,7 @@
 <#macro commonStyle>
 
 	<#-- favicon -->
-	<link rel="icon" href="favicon.ico" />
+	<link rel="icon" href="/favicon.ico" />
 
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,7 +67,7 @@
 <#macro commonHeader>
 	<header class="main-header">
 		<a href="${request.contextPath}/" class="logo">
-			<span class="logo-mini"><b>Redoop</b></span>
+			<span class="logo-mini"><b>辽宁</b></span>
 			<span class="logo-lg"><b>${I18n.admin_name}</b></span>
 		</a>
 		<nav class="navbar navbar-static-top" role="navigation">

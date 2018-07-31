@@ -9,7 +9,7 @@
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
-			<a><b>Redoop</b>JOB</a>
+			<a><b>辽宁交通厅</b>JOB</a>
 		</div>
 		<form id="loginForm" method="post" >
 			<div class="login-box-body">
