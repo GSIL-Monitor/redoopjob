@@ -10,7 +10,7 @@ public enum GlueTypeEnum {
     GLUE_SHELL("GLUE(Shell)", true, "bash", ".sh"),
     GLUE_PYTHON("GLUE(Python)", true, "python", ".py"),
     GLUE_NODEJS("GLUE(Nodejs)", true, "node", ".js"),
-    GLUE_MLSQL("GLUE(MLSql)", true, "MLSQL", ".sql");
+    GLUE_MLSQL("GLUE(MLSql)", true, "MLSQL", ".sh");
 
     private String desc;
     private boolean isScript;
