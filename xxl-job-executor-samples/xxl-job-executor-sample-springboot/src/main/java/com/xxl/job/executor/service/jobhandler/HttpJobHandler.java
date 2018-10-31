@@ -24,7 +24,7 @@ public class HttpJobHandler extends IJobHandler {
 
 	@Override
 	public ReturnT<String> execute(String param) throws Exception {
-
+		System.out.println("param>>>>>>>>"+param);
 		// valid
 		if (param==null || param.trim().length()==0) {
 			XxlJobLogger.log("URL Empty");

@@ -31,6 +31,7 @@ public class DemoJobHandler extends IJobHandler {
 		for (int i = 0; i < 5; i++) {
 			XxlJobLogger.log("beat at:" + i);
 			TimeUnit.SECONDS.sleep(2);
+			System.out.println("i>>>>>>>>>>>>>>>>>"+i);
 		}
 		return SUCCESS;
 	}
