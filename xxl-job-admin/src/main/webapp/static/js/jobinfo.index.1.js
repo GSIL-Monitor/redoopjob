@@ -9,6 +9,7 @@ $(function() {
 			url: base_url + "/jobinfo/pageList",
 			type:"post",
 	        data : function ( d ) {
+				//回显头部搜索框信息
 	        	var obj = {};
 	        	obj.jobGroup = $('#jobGroup').val();
                 obj.jobDesc = $('#jobDesc').val();
@@ -28,8 +29,8 @@ $(function() {
 						"visible" : true,
 						"width":'10%'
 					},
-	                { 
-	                	"data": 'jobGroup', 
+	                {
+	                	"data": 'jobGroup',
 	                	"visible" : false,
 						"width":'20%',
 	                	"render": function ( data, type, row ) {
@@ -68,14 +69,14 @@ $(function() {
 					},
 	                { 
 	                	"data": 'addTime', 
-	                	"visible" : false, 
+	                	"visible" : false,
 	                	"render": function ( data, type, row ) {
 	                		return data?moment(new Date(data)).format("YYYY-MM-DD HH:mm:ss"):"";
 	                	}
 	                },
 	                { 
 	                	"data": 'updateTime', 
-	                	"visible" : false, 
+	                	"visible" : false,
 	                	"render": function ( data, type, row ) {
 	                		return data?moment(new Date(data)).format("YYYY-MM-DD HH:mm:ss"):"";
 	                	}

@@ -64,10 +64,11 @@
 
 </#macro>
 
+<!--主页头部-->
 <#macro commonHeader>
 	<header class="main-header">
 		<a href="${request.contextPath}/" class="logo">
-			<span class="logo-mini"><b>辽宁</b></span>
+			<span class="logo-mini"><b>redoop</b></span>
 			<span class="logo-lg"><b>${I18n.admin_name}</b></span>
 		</a>
 		<nav class="navbar navbar-static-top" role="navigation">
@@ -85,6 +86,7 @@
 	</header>
 </#macro>
 
+<!--主页左侧栏-->
 <#macro commonLeft pageName >
 	<!-- Left side column. contains the logo and sidebar -->
 	<aside class="main-sidebar">
@@ -93,9 +95,24 @@
 			<!-- sidebar menu: : style can be found in sidebar.less -->
 			<ul class="sidebar-menu">
                 <li class="header">${I18n.system_nav}</li>
-				<li class="nav-click <#if pageName == "jobinfo">active</#if>" ><a href="${request.contextPath}/jobinfo"><i class="fa fa-circle-o text-aqua"></i><span>${I18n.jobinfo_name}</span></a></li>
-				<li class="nav-click <#if pageName == "joblog">active</#if>" ><a href="${request.contextPath}/joblog"><i class="fa fa-circle-o text-yellow"></i><span>${I18n.joblog_name}</span></a></li>
-                <li class="nav-click <#if pageName == "jobgroup">active</#if>" ><a href="${request.contextPath}/jobgroup"><i class="fa fa-circle-o text-green"></i><span>${I18n.jobgroup_name}</span></a></li>
+				<li class="nav-click <#if pageName == "jobinfo">active</#if>" >
+					<a href="${request.contextPath}/jobinfo">
+						<i class="fa fa-circle-o text-aqua"></i>
+						<span>任务管理</span>
+					</a>
+				</li>
+				<li class="nav-click <#if pageName == "joblog">active</#if>" >
+					<a href="${request.contextPath}/joblog">
+						<i class="fa fa-circle-o text-yellow"></i>
+						<span>调度日志</span>
+					</a>
+				</li>
+                <li class="nav-click <#if pageName == "jobgroup">active</#if>" >
+					<a href="${request.contextPath}/jobgroup">
+						<i class="fa fa-circle-o text-green"></i>
+						<span>执行器管理</span>
+					</a>
+				</li>
 <#--
 				<li class="nav-click <#if pageName == "help">active</#if>" ><a href="${request.contextPath}/help"><i class="fa fa-circle-o text-gray"></i><span>${I18n.job_help}</span></a></li>
 -->
@@ -105,17 +122,17 @@
 	</aside>
 </#macro>
 
-<#macro commonControl >
-	<!-- Control Sidebar -->
+<#--<#macro commonControl >
+	<!-- Control Sidebar &ndash;&gt;
 	<aside class="control-sidebar control-sidebar-dark">
-		<!-- Create the tabs -->
+		<!-- Create the tabs &ndash;&gt;
 		<ul class="nav nav-tabs nav-justified control-sidebar-tabs">
 			<li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
 			<li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
 		</ul>
-		<!-- Tab panes -->
+		<!-- Tab panes &ndash;&gt;
 		<div class="tab-content">
-			<!-- Home tab content -->
+			<!-- Home tab content &ndash;&gt;
 			<div class="tab-pane active" id="control-sidebar-home-tab">
 				<h3 class="control-sidebar-heading">近期活动</h3>
 				<ul class="control-sidebar-menu">
@@ -129,7 +146,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="javascript::;"> 
+						<a href="javascript::;">
 							<i class="menu-icon fa fa-user bg-yellow"></i>
 							<div class="menu-info">
 								<h4 class="control-sidebar-subheading">Frodo 更新了资料</h4>
@@ -138,7 +155,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="javascript::;"> 
+						<a href="javascript::;">
 							<i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 							<div class="menu-info">
 								<h4 class="control-sidebar-subheading">Nora 加入邮件列表</h4>
@@ -156,11 +173,11 @@
 						</a>
 					</li>
 				</ul>
-				<!-- /.control-sidebar-menu -->
+				<!-- /.control-sidebar-menu &ndash;&gt;
 			</div>
-			<!-- /.tab-pane -->
+			<!-- /.tab-pane &ndash;&gt;
 
-			<!-- Settings tab content -->
+			<!-- Settings tab content &ndash;&gt;
 			<div class="tab-pane" id="control-sidebar-settings-tab">
 				<form method="post">
 					<h3 class="control-sidebar-heading">个人设置</h3>
@@ -170,17 +187,17 @@
 						</label>
 						<p>左侧菜单栏样式自适应</p>
 					</div>
-					<!-- /.form-group -->
+					<!-- /.form-group &ndash;&gt;
 
 				</form>
 			</div>
-			<!-- /.tab-pane -->
+			<!-- /.tab-pane &ndash;&gt;
 		</div>
 	</aside>
-	<!-- /.control-sidebar -->
-	<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+	<!-- /.control-sidebar &ndash;&gt;
+	<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar &ndash;&gt;
 	<div class="control-sidebar-bg"></div>
-</#macro>
+</#macro>-->
 
 <#macro commonFooter >
 	<footer class="main-footer">

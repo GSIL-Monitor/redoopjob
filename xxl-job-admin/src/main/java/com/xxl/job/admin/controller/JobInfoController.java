@@ -63,31 +63,31 @@ public class JobInfoController {
 	public ReturnT<String> add(XxlJobInfo jobInfo) {
 		return xxlJobService.add(jobInfo);
 	}
-	
+	//编辑
 	@RequestMapping("/update")
 	@ResponseBody
 	public ReturnT<String> update(XxlJobInfo jobInfo) {
 		return xxlJobService.update(jobInfo);
 	}
-	
+	//删除
 	@RequestMapping("/remove")
 	@ResponseBody
 	public ReturnT<String> remove(int id) {
 		return xxlJobService.remove(id);
 	}
-	
+	//暂停
 	@RequestMapping("/pause")
 	@ResponseBody
 	public ReturnT<String> pause(int id) {
 		return xxlJobService.pause(id);
 	}
-	
+	//恢复
 	@RequestMapping("/resume")
 	@ResponseBody
 	public ReturnT<String> resume(int id) {
 		return xxlJobService.resume(id);
 	}
-	
+	//执行
 	@RequestMapping("/trigger")
 	@ResponseBody
 	public ReturnT<String> triggerJob(int id) {

@@ -26,12 +26,12 @@ $(function(){
         }, 
         messages : {  
         	userName : {  
-                required  : I18n.login_username_empty,
-                minlength : I18n.login_username_lt_5
+                required  : "请输入账号",
+                minlength : "账号长度不应低于5位"
             },
             password : {
-            	required  : I18n.login_password_empty  ,
-                minlength : I18n.login_password_lt_5
+            	required  : "请输入登录密码"  ,
+                minlength : "密码不应低于5位"
                 /*,maxlength:"登录密码不应超过18位"*/
             }
         }, 

@@ -139,7 +139,7 @@ public class ExecutorBizImpl implements ExecutorBiz {
                 if(GlueTypeEnum.GLUE_MLSQL == glueTypeEnum){
                     glueType="GLUE_SHELL";
                      glueSource = "curl --request POST " +
-                            "  --url http://192.168.1.156:9003/run/script " +
+                            "  --url http://127.0.0.1:9003/run/script " +
                             "  --data 'sql="+glueSource+"'";
                 }
                 jobHandler = new ScriptJobHandler(triggerParam.getJobId(), triggerParam.getGlueUpdatetime(), glueSource, GlueTypeEnum.match(glueType));

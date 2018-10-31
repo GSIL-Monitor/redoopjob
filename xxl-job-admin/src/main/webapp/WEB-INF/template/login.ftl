@@ -7,13 +7,16 @@
 	<title>${I18n.admin_name}</title>
 </head>
 <body class="hold-transition login-page">
+
+
+
 	<div class="login-box">
 		<div class="login-logo">
 			<a><b>REDOOP</b>JOB</a>
 		</div>
 		<form id="loginForm" method="post" >
 			<div class="login-box-body">
-				<p class="login-box-msg">${I18n.admin_name}</p>
+				<p class="login-box-msg">任务调度中心</p>
 				<div class="form-group has-feedback">
 	            	<input type="text" name="userName" class="form-control" placeholder="${I18n.login_username_placeholder}" value="admin" maxlength="18" >
 	            	<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -26,17 +29,20 @@
 					<div class="col-xs-8">
 		              	<div class="checkbox icheck">
 		                	<label>
-		                  		<input type="checkbox" name="ifRemember" >${I18n.login_remember_me}
+		                  		<input type="checkbox" name="ifRemember" >记住密码
 		                	</label>
 						</div>
 		            </div><!-- /.col -->
 		            <div class="col-xs-4">
-						<button type="submit" class="btn btn-primary btn-block btn-flat">${I18n.login_btn}</button>
+						<button type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
 					</div>
 				</div>
 			</div>
 		</form>
 	</div>
+
+
+
 <@netCommon.commonScript />
 <script src="${request.contextPath}/static/plugins/jquery/jquery.validate.min.js"></script>
 <script src="${request.contextPath}/static/adminlte/plugins/iCheck/icheck.min.js"></script>
