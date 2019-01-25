@@ -41,7 +41,7 @@ public class HttpJobHandler extends IJobHandler {
 			// request
 			Request request = httpClient.newRequest(param);
 			request.method(HttpMethod.GET);
-			request.timeout(5000, TimeUnit.MILLISECONDS);
+			request.timeout(3600000, TimeUnit.MILLISECONDS);
 
 			// invoke
 			ContentResponse response = request.send();
