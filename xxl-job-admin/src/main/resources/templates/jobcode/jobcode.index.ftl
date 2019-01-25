@@ -5,16 +5,28 @@
 	<@netCommon.commonStyle />
 	<link rel="stylesheet" href="${request.contextPath}/static/plugins/codemirror/lib/codemirror.css">
 	<link rel="stylesheet" href="${request.contextPath}/static/plugins/codemirror/addon/hint/show-hint.css">
+	<link rel="stylesheet" href="${request.contextPath}/static/plugins/layui/css/layui.css" media="all">
     <title>${I18n.admin_name}</title>
 	<style type="text/css">
 		.CodeMirror {
       		font-size:16px;
-            width: 100%;
-      		height: 100%;
-            /*bottom: 0;
-            top: 0px;*/
+            width: 50%;
+      		height: 93%;
             position: absolute;
 		}
+        .eChartWindow{
+            font-size:16px;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+        }
+        .layui-form-label{
+            width: 140px;
+        }
+        .layui-input-block{
+            margin-left: 140px;
+        }
     </style>
 </head>
 <body class="skin-blue fixed layout-top-nav">
@@ -46,6 +58,26 @@
 					<#-- right nav -->
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">添加节点<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="javascript:;" class="add_event" add_event="0">
+                                            数据抽取
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="add_event" add_event="1">
+                                            数据清洗
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="add_event" add_event="2">
+                                            数据存储
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">${I18n.jobinfo_glue_rollback} <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
@@ -80,7 +112,11 @@
             </nav>
         </header>
 
-		<div class="content-wrapper" id="ideWindow" ></div>
+        <!--EChar后增-->
+		<div class="content-wrapper" id="ideWindow" style="min-height: 100%" >
+            <#--<div id="eChartWindow" style="width: 400px;height:400px;"></div>-->
+            <div id="eChartWindow" class="eChartWindow"></div>
+        </div>
 
 		<!-- footer -->
 		<#--<@netCommon.commonFooter />-->
@@ -140,6 +176,9 @@
     </#if>
 
 
+<script src="${request.contextPath}/static/js/echarts.min.js"></script>
+<script src="${request.contextPath}/static/plugins/layui/layui.all.js"></script>
+<#--<script src="${request.contextPath}/static/plugins/layer/layer.js"></script>-->
 <script src="${request.contextPath}/static/plugins/codemirror/lib/codemirror.js"></script>
 <script src="${glueTypeModeSrc}"></script>
 <#if glueTypeModeSrc02?exists>

@@ -32,6 +32,9 @@ public class ShardingJobHandler extends IJobHandler {
 			}
 		}
 
+
+
+
 		return SUCCESS;
 	}
 	

@@ -121,7 +121,8 @@ public class ExecutorBizImpl implements ExecutorBiz {
                 }
             }
         } else if (glueTypeEnum!=null && glueTypeEnum.isScript()) {
-
+            String glueSource = triggerParam.getGlueSource();
+            String glueType = triggerParam.getGlueType();
             // valid old jobThread
             if (jobThread != null &&
                     !(jobThread.getHandler() instanceof ScriptJobHandler
@@ -135,7 +136,13 @@ public class ExecutorBizImpl implements ExecutorBiz {
 
             // valid handler
             if (jobHandler == null) {
-                jobHandler = new ScriptJobHandler(triggerParam.getJobId(), triggerParam.getGlueUpdatetime(), triggerParam.getGlueSource(), GlueTypeEnum.match(triggerParam.getGlueType()));
+                if(GlueTypeEnum.GLUE_MLSQL == glueTypeEnum){
+                    glueType="GLUE_SHELL";
+                     glueSource = "curl --request POST " +
+                            "  --url http://127.0.0.1:9003/run/script " +
+                            "  --data 'sql="+glueSource+"'";
+                }
+                jobHandler = new ScriptJobHandler(triggerParam.getJobId(), triggerParam.getGlueUpdatetime(), glueSource, GlueTypeEnum.match(glueType));
             }
         } else {
             return new ReturnT<String>(ReturnT.FAIL_CODE, "glueType[" + triggerParam.getGlueType() + "] is not valid.");

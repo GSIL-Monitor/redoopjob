@@ -121,7 +121,7 @@ public class JobThread extends Thread{
 					ShardingUtil.setShardingVo(new ShardingUtil.ShardingVO(triggerParam.getBroadcastIndex(), triggerParam.getBroadcastTotal()));
 
 					// execute
-					XxlJobLogger.log("<br>----------- xxl-job job execute start -----------<br>----------- Param:" + triggerParam.getExecutorParams());
+					XxlJobLogger.log("<br>----------- Redoop job execute start -----------<br>----------- Param:" + triggerParam.getExecutorParams());
 
 					if (triggerParam.getExecutorTimeout() > 0) {
 						// limit timeout
@@ -155,7 +155,7 @@ public class JobThread extends Thread{
 					if (executeResult == null) {
 						executeResult = IJobHandler.FAIL;
 					}
-					XxlJobLogger.log("<br>----------- xxl-job job execute end(finish) -----------<br>----------- ReturnT:" + executeResult);
+					XxlJobLogger.log("<br>----------- Redoop job execute end(finish) -----------<br>----------- ReturnT:" + executeResult);
 
 				} else {
 					if (idleTimes > 30) {
@@ -172,7 +172,7 @@ public class JobThread extends Thread{
 				String errorMsg = stringWriter.toString();
 				executeResult = new ReturnT<String>(ReturnT.FAIL_CODE, errorMsg);
 
-				XxlJobLogger.log("<br>----------- JobThread Exception:" + errorMsg + "<br>----------- xxl-job job execute end(error) -----------");
+				XxlJobLogger.log("<br>----------- JobThread Exception:" + errorMsg + "<br>----------- Redoop job execute end(error) -----------");
 			} finally {
                 if(triggerParam != null) {
                     // callback handler info
@@ -205,6 +205,6 @@ public class JobThread extends Thread{
 			logger.error(e.getMessage(), e);
 		}
 
-		logger.info(">>>>>>>>>>> xxl-job JobThread stoped, hashCode:{}", Thread.currentThread());
+		logger.info(">>>>>>>>>>> Redoop JobThread stoped, hashCode:{}", Thread.currentThread());
 	}
 }

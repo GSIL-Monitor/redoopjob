@@ -31,6 +31,7 @@ public class ShardingJobHandler extends IJobHandler {
 				XxlJobLogger.log("第 {} 片, 忽略", i);
 			}
 		}
+		System.out.println(">>>>>>>>>>>>>>>>>>>>正在执行任务<<<<<<<<<<<<<<<<<<<");
 
 		return SUCCESS;
 	}

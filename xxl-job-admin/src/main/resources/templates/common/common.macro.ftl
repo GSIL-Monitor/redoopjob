@@ -1,7 +1,7 @@
 <#macro commonStyle>
 
 	<#-- favicon -->
-	<link rel="icon" href="${request.contextPath}/static/favicon.ico" />
+	<link rel="icon" href="/favicon.ico" />
 
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,10 +64,11 @@
 
 </#macro>
 
+<!--主页头部-->
 <#macro commonHeader>
 	<header class="main-header">
 		<a href="${request.contextPath}/" class="logo">
-			<span class="logo-mini"><b>XXL</b></span>
+			<span class="logo-mini"><b>redoop</b></span>
 			<span class="logo-lg"><b>${I18n.admin_name}</b></span>
 		</a>
 		<nav class="navbar navbar-static-top" role="navigation">
@@ -85,6 +86,7 @@
 	</header>
 </#macro>
 
+<!--主页左侧栏-->
 <#macro commonLeft pageName >
 	<!-- Left side column. contains the logo and sidebar -->
 	<aside class="main-sidebar">
@@ -98,23 +100,24 @@
 				<li class="nav-click <#if pageName == "joblog">active</#if>" ><a href="${request.contextPath}/joblog"><i class="fa fa-circle-o text-green"></i><span>${I18n.joblog_name}</span></a></li>
                 <li class="nav-click <#if pageName == "jobgroup">active</#if>" ><a href="${request.contextPath}/jobgroup"><i class="fa fa-circle-o text-red"></i><span>${I18n.jobgroup_name}</span></a></li>
 				<li class="nav-click <#if pageName == "help">active</#if>" ><a href="${request.contextPath}/help"><i class="fa fa-circle-o text-gray"></i><span>${I18n.job_help}</span></a></li>
+-->
 			</ul>
 		</section>
 		<!-- /.sidebar -->
 	</aside>
 </#macro>
 
-<#macro commonControl >
-	<!-- Control Sidebar -->
+<#--<#macro commonControl >
+	<!-- Control Sidebar &ndash;&gt;
 	<aside class="control-sidebar control-sidebar-dark">
-		<!-- Create the tabs -->
+		<!-- Create the tabs &ndash;&gt;
 		<ul class="nav nav-tabs nav-justified control-sidebar-tabs">
 			<li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
 			<li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
 		</ul>
-		<!-- Tab panes -->
+		<!-- Tab panes &ndash;&gt;
 		<div class="tab-content">
-			<!-- Home tab content -->
+			<!-- Home tab content &ndash;&gt;
 			<div class="tab-pane active" id="control-sidebar-home-tab">
 				<h3 class="control-sidebar-heading">近期活动</h3>
 				<ul class="control-sidebar-menu">
@@ -128,7 +131,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="javascript::;"> 
+						<a href="javascript::;">
 							<i class="menu-icon fa fa-user bg-yellow"></i>
 							<div class="menu-info">
 								<h4 class="control-sidebar-subheading">Frodo 更新了资料</h4>
@@ -137,7 +140,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="javascript::;"> 
+						<a href="javascript::;">
 							<i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 							<div class="menu-info">
 								<h4 class="control-sidebar-subheading">Nora 加入邮件列表</h4>
@@ -155,11 +158,11 @@
 						</a>
 					</li>
 				</ul>
-				<!-- /.control-sidebar-menu -->
+				<!-- /.control-sidebar-menu &ndash;&gt;
 			</div>
-			<!-- /.tab-pane -->
+			<!-- /.tab-pane &ndash;&gt;
 
-			<!-- Settings tab content -->
+			<!-- Settings tab content &ndash;&gt;
 			<div class="tab-pane" id="control-sidebar-settings-tab">
 				<form method="post">
 					<h3 class="control-sidebar-heading">个人设置</h3>
@@ -169,26 +172,24 @@
 						</label>
 						<p>左侧菜单栏样式自适应</p>
 					</div>
-					<!-- /.form-group -->
+					<!-- /.form-group &ndash;&gt;
 
 				</form>
 			</div>
-			<!-- /.tab-pane -->
+			<!-- /.tab-pane &ndash;&gt;
 		</div>
 	</aside>
-	<!-- /.control-sidebar -->
-	<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+	<!-- /.control-sidebar &ndash;&gt;
+	<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar &ndash;&gt;
 	<div class="control-sidebar-bg"></div>
-</#macro>
+</#macro>-->
 
 <#macro commonFooter >
 	<footer class="main-footer">
-        Powered by <b>XXL-JOB</b> ${I18n.admin_version}
+        Powered by <b>Redoop</b>
 		<div class="pull-right hidden-xs">
-            <strong>Copyright &copy; 2015-${.now?string('yyyy')} &nbsp;
-                <a href="http://www.xuxueli.com/" target="_blank" >xuxueli</a>
-				&nbsp;
-                <a href="https://github.com/xuxueli/xxl-job" target="_blank" >github</a>
+            <strong>Copyright &copy; 2013-${.now?string('yyyy')} &nbsp;
+                <a href="http://www.redoop.com/" target="_blank" >Redoop</a>
             </strong><!-- All rights reserved. -->
 		</div>
 	</footer>
